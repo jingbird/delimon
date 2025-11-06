@@ -37,7 +37,9 @@
 - [x] Issue #1-5: Git設定の確認・追加
   - .gitignoreに必要な項目がすべて含まれていることを確認
   - .env、node_modules、.expo、dist等が除外設定済み
-- [ ] Issue #1-6: 初回動作確認
+- [x] Issue #1-6: 初回動作確認
+  - TypeScriptビルドエラーチェック完了（npx tsc --noEmit）
+  - エラー0件確認
 
 ---
 
