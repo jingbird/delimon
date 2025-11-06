@@ -13,8 +13,16 @@
 - ✅ GitHubリポジトリ作成（jingbird/delimon）
 - ✅ GitHub Issues #1〜#30作成完了
 
-### 次のタスク
-- [ ] Issue #1: Expoプロジェクトのセットアップ
+### 進行中のタスク
+- [x] Issue #1-1: Expoプロジェクトの初期化
+  - Expo SDK 54（blank-typescript template）でプロジェクト作成完了
+  - React Native 0.81.5, React 19, TypeScript 5.9.2
+  - 既存ファイル競合の問題を解決（退避→作成→マージ）
+- [ ] Issue #1-2: TypeScript設定の調整
+- [ ] Issue #1-3: Expo Routerの導入
+- [ ] Issue #1-4: Lintツールの設定
+- [ ] Issue #1-5: Git設定の確認・追加
+- [ ] Issue #1-6: 初回動作確認
 
 ---
 

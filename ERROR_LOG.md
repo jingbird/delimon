@@ -33,6 +33,32 @@
 
 ## エラー履歴
 
-（まだエラーは発生していません）
+### [2025-11-06] Expoプロジェクト作成時のファイル競合
+
+**発生箇所**: Issue #1 - Expoプロジェクトの初期化
+
+**エラーメッセージ**:
+```
+The directory delimon has files that might be overwritten:
+  CLAUDE.md
+  DEVELOPMENT_LOG.md
+  ERROR_LOG.md
+  README.md
+  create-issues-14-30.ps1
+  create-issues-simple.ps1
+  create-issues.ps1
+```
+
+**原因**: 既存のファイルがあるディレクトリにExpoプロジェクトを作成しようとしたため
+
+**試した対処法**:
+1. `npx create-expo-app@latest . --template blank-typescript` → 失敗（既存ファイル競合）
+2. 既存ファイルを一時ディレクトリに退避 → 成功
+
+**解決方法**:
+既存ファイルを `../delimon_backup/` に退避後、Expoプロジェクトを作成。
+その後、退避したファイルを戻し、.gitignoreとREADME.mdをマージした。
+
+**参考資料**: create-expo-appの制限により、既存ファイルがあるディレクトリには直接作成できない
 
 ---
