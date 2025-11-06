@@ -27,7 +27,13 @@
   - app/_layout.tsx作成（ルートレイアウト）
   - app/index.tsx作成（テスト用ホーム画面）
   - package.jsonのmainをexpo-router/entryに変更
-- [ ] Issue #1-4: Lintツールの設定
+- [x] Issue #1-4: Lintツールの設定
+  - ESLint 8.57.1インストール（9から8にダウングレード）
+  - Prettier 3.6.2インストール
+  - .eslintrc.js作成（TypeScript、React、React Hooksルール設定）
+  - .prettierrc作成（フォーマット設定）
+  - .eslintignore作成（node_modules等を除外）
+  - package.jsonにlint、lint:fix、formatスクリプト追加
 - [ ] Issue #1-5: Git設定の確認・追加
 - [ ] Issue #1-6: 初回動作確認
 

@@ -88,3 +88,27 @@ React を19.1.0から19.2.0にアップデートすることで解決。
 **参考資料**: Expo Routerが最新のReactバージョンを要求するため、React 19.2.0へのアップデートが必要
 
 ---
+
+### [2025-11-06] ESLint 9の新しい設定形式エラー
+
+**発生箇所**: Issue #1 - Lintツールの設定
+
+**エラーメッセージ**:
+```
+ESLint couldn't find an eslint.config.(js|mjs|cjs) file.
+From ESLint v9.0.0, the default configuration file is now eslint.config.js.
+```
+
+**原因**: ESLint 9では.eslintrc.jsではなく、eslint.config.jsが必要
+
+**試した対処法**:
+1. `.eslintrc.js`を作成 → 失敗（ESLint 9の新形式が必要）
+2. `npm install --save-dev eslint@8` → 成功
+
+**解決方法**:
+ESLint 9から8にダウングレードすることで、従来の.eslintrc.js形式を使用可能にした。
+また、.eslintignoreを作成してnode_modulesなどの不要なフォルダを除外。
+
+**参考資料**: ESLint 9では新しいFlat Config形式が必要だが、既存プロジェクトとの互換性のためESLint 8を使用
+
+---
