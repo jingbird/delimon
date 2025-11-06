@@ -62,3 +62,29 @@ The directory delimon has files that might be overwritten:
 **参考資料**: create-expo-appの制限により、既存ファイルがあるディレクトリには直接作成できない
 
 ---
+
+### [2025-11-06] Expo Router依存関係インストール時のReactバージョン競合
+
+**発生箇所**: Issue #1 - Expo Routerの導入
+
+**エラーメッセージ**:
+```
+Could not resolve dependency:
+peer react@"^19.2.0" from react-dom@19.2.0
+Conflicting peer dependency: react@19.2.0
+現在のReact: 19.1.0
+```
+
+**原因**: react-dom@19.2.0がReact^19.2.0を要求するが、プロジェクトにはReact 19.1.0がインストールされている
+
+**試した対処法**:
+1. `npx expo install expo-linking expo-constants react-native-safe-area-context react-native-screens` → 失敗（バージョン競合）
+2. `npm install react@19.2.0 @types/react@19.2.0` → 成功
+
+**解決方法**:
+React を19.1.0から19.2.0にアップデートすることで解決。
+その後、Expo Routerの依存関係を正常にインストールできた。
+
+**参考資料**: Expo Routerが最新のReactバージョンを要求するため、React 19.2.0へのアップデートが必要
+
+---

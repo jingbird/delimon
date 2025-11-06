@@ -18,8 +18,15 @@
   - Expo SDK 54（blank-typescript template）でプロジェクト作成完了
   - React Native 0.81.5, React 19, TypeScript 5.9.2
   - 既存ファイル競合の問題を解決（退避→作成→マージ）
-- [ ] Issue #1-2: TypeScript設定の調整
-- [ ] Issue #1-3: Expo Routerの導入
+- [x] Issue #1-2: TypeScript設定の調整
+  - strict: true確認済み
+  - パスエイリアス設定追加（@/* → src/*）
+- [x] Issue #1-3: Expo Routerの導入
+  - expo-router@6.0.14インストール完了
+  - React 19.1.0→19.2.0にアップデート（依存関係解決）
+  - app/_layout.tsx作成（ルートレイアウト）
+  - app/index.tsx作成（テスト用ホーム画面）
+  - package.jsonのmainをexpo-router/entryに変更
 - [ ] Issue #1-4: Lintツールの設定
 - [ ] Issue #1-5: Git設定の確認・追加
 - [ ] Issue #1-6: 初回動作確認
