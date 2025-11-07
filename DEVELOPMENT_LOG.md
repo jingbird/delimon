@@ -40,6 +40,58 @@
 - [x] Issue #1-6: 初回動作確認
   - TypeScriptビルドエラーチェック完了（npx tsc --noEmit）
   - エラー0件確認
+- [x] GitHubへのpush完了
+  - Windows側のGitを使用してpush成功
+  - Issue #1完全完了
+
+### Issue #1完了 ✅
+
+---
+
+## 2025年11月7日
+
+### 完了したタスク
+- ✅ Issue #1のコミットをGitHubにpush完了
+  - Windows側のGitを使用してpush成功（WSL認証問題を回避）
+  - 6つのコミットすべてがリモートに反映
+
+### UIイメージ画像の確認・仕様確定
+- ✅ UIイメージ画像8枚を確認完了
+  - オンボーディング、キャラクター選択、サインアップ、ホーム
+  - 配送、配送終了、図鑑、履歴
+  - すべて`docs/ui-designs/`に配置
+- ✅ 仕様確定（ユーザーとの合意）
+  - **認証機能**: メール+パスワードのみ（Google/Apple認証はPhase 2以降）
+  - **図鑑機能**: 所持キャラはカラー、未所持は「？」、相棒は太枠表示
+  - **プロフィール設定画面**: UIイメージは後日作成
+- ✅ 設計書更新
+  - `docs/01_requirements_delimon.md`を更新
+    - 認証機能に将来的なSNS認証を追記
+    - 図鑑機能の仕様を詳細化（所持/未所持/相棒の表示方法）
+
+### Issue #2完了: Supabaseプロジェクトのセットアップ ✅
+- ✅ Supabaseプロジェクト作成完了（ユーザー実施）
+  - プロジェクト名: deliverymon
+  - リージョン: Tokyo (Northeast Asia)
+  - Project URL: https://ipilafzdzlenljzippey.supabase.co
+- ✅ 環境変数ファイル(.env)作成
+  - EXPO_PUBLIC_SUPABASE_URL設定
+  - EXPO_PUBLIC_SUPABASE_ANON_KEY設定
+  - .gitignoreに.env含まれることを確認済み
+- ✅ Supabaseクライアントライブラリインストール
+  - @supabase/supabase-js
+  - react-native-url-polyfill
+- ✅ Supabaseクライアント初期化
+  - src/services/supabase/client.ts作成
+  - src/services/supabase/index.ts作成
+  - パスエイリアス(@/)使用
+- ✅ 接続確認テスト実装
+  - app/index.tsxにテストコード追加
+  - TypeScriptビルドエラー0件確認
+  - Lintエラー0件確認
+
+### 進行中のタスク
+- なし（次のIssueへ進む準備完了）
 
 ---
 
